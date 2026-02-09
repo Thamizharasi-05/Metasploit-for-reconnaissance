@@ -52,14 +52,13 @@ scan the targets with the command db_nmap as follows.
 msf > db_nmap 192.168.181.0/24
 ## OUTPUT:
 
-
+<img width="892" height="147" alt="Screenshot 2026-02-06 141203" src="https://github.com/user-attachments/assets/b75cb03c-5553-4147-8d07-66532eda24e4" />
 
 Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules.
 cd /usr/share /metasploit-framework/modules/auxiliary
 kali > ls -l
 ## OUTPUT:
 
-<img width="892" height="147" alt="Screenshot 2026-02-06 141203" src="https://github.com/user-attachments/assets/b75cb03c-5553-4147-8d07-66532eda24e4" />
 
 <img width="577" height="432" alt="Screenshot 2026-02-06 135340" src="https://github.com/user-attachments/assets/b5feabe8-147c-46f1-b9c9-c388ed943ce4" />
 
@@ -80,9 +79,7 @@ systemctl start postgresql
 msfdb init
 ## OUTPUT:
 
-
-
-
+<img width="770" height="158" alt="image" src="https://github.com/user-attachments/assets/1f797e6a-14b9-4d6f-b6f2-71342442815c" />
 
 ## MYSQL ENUMERATION
 Find the IP address of the Metasploitable machine first. Then, use the db_nmap command in msfconsole with Nmap flags to scan the MySQL database at 3306 port.
@@ -96,6 +93,7 @@ Use the search option to look for an auxiliary module to scan and enumerate the 
 search type:auxiliary mysql
 ## OUTPUT:
 
+<img width="1346" height="466" alt="Screenshot 2026-02-06 141335" src="https://github.com/user-attachments/assets/d8ec5e2d-14d6-4608-b23d-cd5e67496e57" />
 
 use the auxiliary/scanner/mysql/mysql_version module by typing the module name or associated number to scan MySQL version details.
 use 11
@@ -103,19 +101,18 @@ Or:
 use auxiliary/scanner/mysql/mysql_version
 ## OUTPUT:
 
-
+<img width="1139" height="371" alt="Screenshot 2026-02-06 141423" src="https://github.com/user-attachments/assets/ee5fbf69-4a67-4e79-9bbd-9bd5a9ebc8b4" />
 
 
 Use the set rhosts command to set the parameter and run the module, as follows:
 ## OUTPUT:
 
-
+<img width="656" height="104" alt="Screenshot 2026-02-06 141559" src="https://github.com/user-attachments/assets/0f02e9cc-ea39-46b7-bf15-a4f66ba5d021" />
 
 After scanning, you can also brute force MySQL root account via Metasploit's auxiliary(scanner/mysql/mysql_login) module.
 ## OUTPUT:
 
-
-
+<img width="983" height="562" alt="Screenshot 2026-02-06 142005" src="https://github.com/user-attachments/assets/d8252c6c-2c4d-4cf4-ba18-cf664c21b6d1" />
 
 set the PASS_FILE parameter to the wordlist path available inside /usr/share/wordlists:
 set PASS_FILE /usr/share/wordlistss/rockyou.txt
@@ -125,10 +122,7 @@ Set BLANK_PASSWORDS to true in case there is no password set for the root accoun
 set BLANK_PASSWORDS true
 ## OUTPUT:
 
-
-
-
-
+<img width="885" height="260" alt="Screenshot 2026-02-06 142552" src="https://github.com/user-attachments/assets/4e1de293-6b0e-431d-8cd0-74f3cf81c605" />
 
 ## RESULT:
 The Metasploit framework for reconnaissance is  examined successfully
